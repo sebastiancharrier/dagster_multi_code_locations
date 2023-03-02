@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"dbt.queryLimit": 20,
+		"files.associations": {
+			"*.sql": "jinja-sql"
+		},
+		"actionButtons": {
+			"defaultColor": "#ff0034", // Can also use string color names.
+			"loadNpmCommands":false, // Disables automatic generation of actions for npm commands.
+			"reloadButton":null, // Custom reload button text or icon (default ↻). null value enables automatic reload on configuration change
+			"commands":[
+				{
+					"name": "🗳️ Dagster Install dev",
+                    "color": "white",
+					"singleInstance": true,
+					"command": "pip3 install -e '.[dev]'"
+				},
+				{
+					"name": "▶️ Dagster Run",
+                    "color": "white",
+					"singleInstance": true,
+					"command": "dagster dev -m dagster_modules.analytics -m dagster_modules.streaming"
+				},
+			]		
+		},
+		"editor.detectIndentation": false,
+		"editor.tabSize": 4,
+		"editor.insertSpaces": true,
+	}
+}

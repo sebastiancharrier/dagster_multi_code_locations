@@ -1,0 +1,7 @@
+locations:
+  - location_name: analytics
+    code_source:
+      package_name: dagster_modules.analytics
+  - location_name: streaming
+    code_source:
+      package_name: dagster_modules.streaming
